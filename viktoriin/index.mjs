@@ -30,7 +30,7 @@ const images = [
   },
   {
     file: 'JP.JPG',
-    name: 'Julia Polikasašova',
+    name: 'Julia Polikašova',
   },
   {
     file: 'KK.JPG',
@@ -61,6 +61,7 @@ class Game {
       cards[i].remove();
     }
     title.innerHTML = images[this.lvl-1].name;
+    if (this.lvl == images.length) buttonShow.style.display = "none";
   }
 
   loadNextLevel() {
@@ -87,10 +88,7 @@ class Game {
       }
     }
     this.lvl++;
-    if (this.lvl == images.length) {
-      buttonNext.style.display = "none";
-      buttonShow.style.display = "none";
-    }
+    if (this.lvl == images.length) buttonNext.style.display = "none";
   }
 }
 
