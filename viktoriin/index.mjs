@@ -87,6 +87,10 @@ class Game {
       }
     }
     this.lvl++;
+    if (this.lvl == images.length) {
+      buttonNext.style.display = "none";
+      buttonShow.style.display = "none";
+    }
   }
 }
 
